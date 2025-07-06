@@ -1,62 +1,62 @@
-# harmony-TDMPC2: Rocket Landing with Harmony-TDMPC2
+# harmony-TDMPC2: Precision Rocket Landing with Advanced Reinforcement Learning
 
-This repository demonstrates the application of the **harmony-TDMPC2** algorithm, a novel approach in reinforcement learning, to the challenging problem of rocket landing.
+This repository showcases the power of **harmony-TDMPC2**, a novel reinforcement learning algorithm, applied to the critical challenge of autonomous rocket landing.
 
-## Project Overview
+## Project Highlights
 
-We utilize harmony-TDMPC2 to train an agent capable of autonomously landing a rocket safely and efficiently. The algorithm's ability to handle complex dynamics and optimize control policies is showcased through simulated rocket landing scenarios.
+We've trained an agent using **harmony-TDMPC2** to achieve safe and efficient rocket landings. This project demonstrates the algorithm's capability in mastering complex dynamics and optimizing control policies within simulated rocket landing environments.
 
-## Visual Demonstration
+## Visual Proof of Success
 
-The following GIFs illustrate the successful rocket landing process achieved by the harmony-TDMPC2 agent:
+Witness the **harmony-TDMPC2** agent's successful rocket landings in action:
 
 <p align="center">
-  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/1.gif" width="30%"/>
-  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/2.gif" width="30%"/>
-  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/3.gif" width="30%"/>
+  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/1.gif" width="30%" alt="Rocket Landing Demo 1"/>
+  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/2.gif" width="30%" alt="Rocket Landing Demo 2"/>
+  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/3.gif" width="30%" alt="Rocket Landing Demo 3"/>
 </p>
 
-## Key Features
+## Core Features
 
-*   **Reinforcement Learning:** Leverages advanced RL techniques for optimal control.
-*   **harmony-TDMPC2:** Implements a state-of-the-art TDMPC2 algorithm with harmony-inspired enhancements.
-*   **Rocket Landing:** Specifically targets the complex dynamics of rocket trajectory control and landing.
-*   **Simulation-based:** Developed and tested within a simulated environment.
+*   **Advanced Reinforcement Learning:** Utilizes cutting-edge RL techniques for optimal control.
+*   **harmony-TDMPC2 Algorithm:** Implements a state-of-the-art TDMPC2 with unique harmony-inspired enhancements.
+*   **Rocket Landing Focus:** Specifically engineered for the intricate control of rocket trajectories and precise landings.
+*   **Simulation-Driven:** Developed and rigorously tested in a high-fidelity simulation environment.
 
-## Getting Started
+## Quick Start Guide
 
-To set up the environment and run the project, please follow these steps:
+Get your environment set up and run the project with these simple steps:
 
-1.  **Clone the repository:**
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/PaoShou-China/harmony-TDMPC2.git
     cd harmony-TDMPC2
     ```
 
-2.  **Set up the Conda Environment and Dependencies:**
-    This project utilizes a `environment.yaml` file to manage all necessary dependencies, including `tdmpc2`.
+2.  **Set Up Conda Environment & Dependencies:**
+    All project dependencies, including `tdmpc2`, are managed via `environment.yaml`.
 
-    *   **Create and activate the Conda environment:**
+    *   **Create and Activate Environment:**
         ```bash
         conda env create -f environment.yaml
         conda activate tdmpc2
         ```
-        *(Note: The environment name `tdmpc2` is assumed from the `environment.yaml`. Please adjust if your `environment.yaml` specifies a different name.)*
+        *(Note: The environment name `tdmpc2` is assumed from `environment.yaml`. Adjust if your file specifies a different name.)*
 
-    *   **Integrate a specific version of PyFlyt:**
-        For this project, we are using a modified version of PyFlyt found at [https://github.com/defrag-bambino/MyPyFlyt/tree/master](https://github.com/defrag-bambino/MyPyFlyt/tree/master).
-        After creating the Conda environment, you will need to manually replace the `[PyFlyt/gym_envs/rocket_envs/rocket_landing_env.py]' files within your project's directory with the corresponding files from the `MyPyFlyt` repository. Please refer to the `MyPyFlyt` repository for instructions on how to integrate these files.
+    *   **Integrate Custom PyFlyt Version:**
+        This project requires a specific version of PyFlyt, available at [https://github.com/defrag-bambino/MyPyFlyt/tree/master](https://github.com/defrag-bambino/MyPyFlyt/tree/master).
+        After activating your Conda environment, please manually replace the `[PyFlyt/gym_envs/rocket_envs/rocket_landing_env.py]` files in your project directory with the corresponding files from the `MyPyFlyt` repository. Refer to the `MyPyFlyt` repository for detailed integration instructions.
 
-3.  **Run the simulation:**
-    Once the environment is activated, you can run the project's code directly.
+3.  **Run the Simulation:**
+    With your environment activated, execute the training script:
     ```bash
     python train.py
     ```
 
-## Contributing
+## Contribute
 
-Contributions are welcome! Please feel free to submit pull requests or open issues.
+We welcome your contributions! Feel free to submit pull requests or open issues.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
