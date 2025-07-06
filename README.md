@@ -11,9 +11,9 @@ We utilize harmony-TDMPC2 to train an agent capable of autonomously landing a ro
 The following GIFs illustrate the successful rocket landing process achieved by the harmony-TDMPC2 agent:
 
 <p align="center">
-  <img src="https://github.com/PaoShou-China/harmon-TDMPC2/blob/main/video/1.gif" width="30%"/>
-  <img src="https://github.com/PaoShou-China/harmon-TDMPC2/blob/main/video/2.gif" width="30%"/>
-  <img src="https://github.com/PaoShou-China/harmon-TDMPC2/blob/main/video/3.gif" width="30%"/>
+  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/1.gif" width="30%"/>
+  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/2.gif" width="30%"/>
+  <img src="https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/3.gif" width="30%"/>
 </p>
 
 ## Key Features
@@ -25,20 +25,26 @@ The following GIFs illustrate the successful rocket landing process achieved by 
 
 ## Getting Started
 
-(Optional: Add instructions on how to set up and run the code here. For example:)
+To set up the environment and run the project, please follow these steps:
 
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/PaoShou-China/harmon-TDMPC2.git
     cd harmon-TDMPC2
     ```
-2.  **Install dependencies:**
+
+2.  **Create and activate a Conda environment:**
+    This project uses a `environment.yaml` file to manage all dependencies, including `tdmpc2` and `PyFlyt`.
     ```bash
-    pip install -r requirements.txt
+    conda env create -f environment.yaml
+    conda activate tdmpc2 # Replace
     ```
+    *(Ensure that your `environment.yaml` file correctly specifies the installation of `tdmpc2` and `PyFlyt`, either by including them directly if they are available as conda packages, or by using `pip` within the YAML to install them from their respective GitHub repositories.)*
+
 3.  **Run the simulation:**
+    Once the environment is activated, you can run the project's code directly.
     ```bash
-    python main.py
+    python train.py
     ```
 
 ## Contributing
