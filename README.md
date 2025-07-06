@@ -1,6 +1,4 @@
-# harmon-TDMPC2
-
-# harmon-TDMPC2: Rocket Landing with Harmony-TDMPC2
+# harmony-TDMPC2: Rocket Landing with Harmony-TDMPC2
 
 This repository demonstrates the application of the **harmony-TDMPC2** algorithm, a novel approach in reinforcement learning, to the challenging problem of rocket landing.
 
