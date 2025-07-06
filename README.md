@@ -45,7 +45,7 @@ To set up the environment and run the project, please follow these steps:
 
     *   **Integrate a specific version of PyFlyt:**
         For this project, we are using a modified version of PyFlyt found at [https://github.com/defrag-bambino/MyPyFlyt/tree/master](https://github.com/defrag-bambino/MyPyFlyt/tree/master).
-        After creating the Conda environment, you will need to manually replace the `gym_env` files within your project's directory with the corresponding files from the `MyPyFlyt` repository. Please refer to the `MyPyFlyt` repository for instructions on how to integrate these files.
+        After creating the Conda environment, you will need to manually replace the `[rocket_landing_env.py](https://github.com/defrag-bambino/MyPyFlyt/blob/master/PyFlyt/gym_envs/rocket_envs/rocket_landing_env.py)` files within your project's directory with the corresponding files from the `MyPyFlyt` repository. Please refer to the `MyPyFlyt` repository for instructions on how to integrate these files.
 
 3.  **Run the simulation:**
     Once the environment is activated, you can run the project's code directly.
