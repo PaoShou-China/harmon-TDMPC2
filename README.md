@@ -12,11 +12,11 @@ We utilize harmony-TDMPC2 to train an agent capable of autonomously landing a ro
 
 The following GIFs illustrate the successful rocket landing process achieved by the harmony-TDMPC2 agent:
 
-![Rocket Landing 1](https://github.com/PaoShou-China/harmon-TDMPC2/blob/main/video/1.gif)
+![Rocket Landing 1](https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/1.gif)
 
-![Rocket Landing 2](https://github.com/PaoShou-China/harmon-TDMPC2/blob/main/video/2.gif)
+![Rocket Landing 2](https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/2.gif)
 
-![Rocket Landing 3](https://github.com/PaoShou-China/harmon-TDMPC2/blob/main/video/3.gif)
+![Rocket Landing 3](https://github.com/PaoShou-China/harmony-TDMPC2/blob/main/video/3.gif)
 
 ## Key Features
 
