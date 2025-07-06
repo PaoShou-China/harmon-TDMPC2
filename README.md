@@ -29,8 +29,8 @@ To set up the environment and run the project, please follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/PaoShou-China/harmon-TDMPC2.git
-    cd harmon-TDMPC2
+    git clone https://github.com/PaoShou-China/harmony-TDMPC2.git
+    cd harmony-TDMPC2
     ```
 
 2.  **Create and activate a Conda environment:**
