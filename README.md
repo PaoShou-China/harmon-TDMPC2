@@ -33,13 +33,19 @@ To set up the environment and run the project, please follow these steps:
     cd harmony-TDMPC2
     ```
 
-2.  **Create and activate a Conda environment:**
-    This project uses a `environment.yaml` file to manage all dependencies, including `tdmpc2` and `PyFlyt`.
-    ```bash
-    conda env create -f environment.yaml
-    conda activate tdmpc2 # Replace
-    ```
-    *(Ensure that your `environment.yaml` file correctly specifies the installation of `tdmpc2` and `PyFlyt`, either by including them directly if they are available as conda packages, or by using `pip` within the YAML to install them from their respective GitHub repositories.)*
+2.  **Set up the Conda Environment and Dependencies:**
+    This project utilizes a `environment.yaml` file to manage all necessary dependencies, including `tdmpc2`.
+
+    *   **Create and activate the Conda environment:**
+        ```bash
+        conda env create -f environment.yaml
+        conda activate tdmpc2
+        ```
+        *(Note: The environment name `tdmpc2` is assumed from the `environment.yaml`. Please adjust if your `environment.yaml` specifies a different name.)*
+
+    *   **Integrate a specific version of PyFlyt:**
+        For this project, we are using a modified version of PyFlyt found at [https://github.com/defrag-bambino/MyPyFlyt/tree/master](https://github.com/defrag-bambino/MyPyFlyt/tree/master).
+        After creating the Conda environment, you will need to manually replace the `gym_env` files within your project's directory with the corresponding files from the `MyPyFlyt` repository. Please refer to the `MyPyFlyt` repository for instructions on how to integrate these files.
 
 3.  **Run the simulation:**
     Once the environment is activated, you can run the project's code directly.
