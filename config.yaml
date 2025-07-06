@@ -1,93 +1,166 @@
+# Default configurations.
 defaults:
+    # Override Hydra's launcher to use submitit_local for local task submission.
     - override hydra/launcher: submitit_local
 
-# environment
+# Environment configuration.
+# Specify the reinforcement learning environment to be used.
 task: PyFlyt/Rocket-Landing-v4
+# Specify the observation space type, here 'state' meaning state information is used.
 obs: state
+# Whether the task is episodic, True indicates it is.
 episodic: True
+# The mode of the task, here 'random' indicating random mode is used.
 mode: random
 
-# evaluation
+# Evaluation configuration.
+# Specify the path to the checkpoint to load, '???' means it needs manual specification.
 checkpoint: ???
+# Number of episodes to run during evaluation.
 eval_episodes: 10
+# Frequency of evaluation, evaluate every N training steps.
 eval_freq: 1000
 
-# training
+# Training configuration.
+# Total number of training steps.
 steps: 10_000_000
+# Batch size used during training.
 batch_size: 256
+# Whether to enable Harmony algorithm.
 harmony: true
+# Reward coefficient.
 reward_coef: 0.3
+# Value function coefficient.
 value_coef: 0.3
+# Termination condition coefficient.
 termination_coef: 1
+# Consistency coefficient.
 consistency_coef: 5
+# Rho value, a parameter for certain algorithms.
 rho: 0.5
+# Learning rate.
 lr: 3e-4
+# Encoder learning rate scaling factor.
 enc_lr_scale: 0.3
+# Upper bound for the L2 norm of gradients for clipping.
 grad_clip_norm: 20
+# Tau value for soft updates of target networks.
 tau: 0.01
+# Denominator for the discount factor.
 discount_denom: 5
+# Minimum value for the discount factor.
 discount_min: 0.95
+# Maximum value for the discount factor.
 discount_max: 0.995
+# Size of the replay buffer.
 buffer_size: 500_000
+# Name of the experiment.
 exp_name: default
+# Path to the data directory, '???' means it needs manual specification.
 data_dir: ???
 
-# planning
+# Planning configuration (MPC - Model Predictive Control).
+# Whether to enable MPC.
 mpc: true
+# Number of iterations for MPC.
 iterations: 3
+# Number of samples for MPC.
 num_samples: 64
+# Number of elite samples for MPC.
 num_elites: 32
+# Number of policy trajectories for MPC.
 num_pi_trajs: 16
+# Planning horizon (number of steps) for MPC.
 horizon: 3
+# Minimum standard deviation for MPC policy.
 min_std: 0.05
+# Maximum standard deviation for MPC policy.
 max_std: 1
+# Temperature parameter for MPC, used to control exploration.
 temperature: 0.2
 
-# actor
+# Actor network configuration.
+# Minimum log standard deviation output by the Actor.
 log_std_min: -10
+# Maximum log standard deviation output by the Actor.
 log_std_max: 2
+# Entropy coefficient, used to encourage exploration.
 entropy_coef: 1e-4
 
-# critic
+# Critic network configuration.
+# Number of bins used by the Critic for Q or V values.
 num_bins: 101
+# Minimum value for the Critic's value function.
 vmin: -10
+# Maximum value for the Critic's value function.
 vmax: +10
 
-# architecture
+# Architecture configuration.
+# Model size, '???' means it needs manual specification.
 model_size: ???
+# Number of layers in the encoder.
 num_enc_layers: 2
+# Dimension of the encoder.
 enc_dim: 128
+# Number of convolutional filters.
 num_channels: 32
+# Dimension of MLP layers.
 mlp_dim: 128
+# Dimension of the latent space.
 latent_dim: 128
+# Dimension for tasks, used in multi-task learning.
 task_dim: 0
+# Number of Q functions in the Critic network.
 num_q: 5
+# Dropout rate.
 dropout: 0.01
+# Dimension for SimNorm.
 simnorm_dim: 8
 
-# logging
+# Logging configuration.
+# Wandb project name, '???' means it needs manual specification.
 wandb_project: ???
+# Wandb user entity name, '???' means it needs manual specification.
 wandb_entity: ???
+# Whether to run Wandb silently.
 wandb_silent: false
+# Whether to enable Wandb logging.
 enable_wandb: false
+# Whether to save logs in CSV format.
 save_csv: true
 
-# misc
+# Miscellaneous configuration.
+# Whether to enable JIT compilation for acceleration.
 compile: true
+# Whether to save videos of the training process.
 save_video: true
+# Whether to save the trained Agent model.
 save_agent: true
+# Random seed.
 seed: 1
 
-# convenience
+# Convenience configuration (typically auto-filled by scripts based on the task).
+# Working directory, '???' means it needs manual specification.
 work_dir: ???
+# Title of the task, '???' means it needs manual specification.
 task_title: ???
+# Whether it is a multi-task learning setup, '???' means it needs manual specification.
 multitask: ???
+# List of tasks, '???' means it needs manual specification.
 tasks: ???
+# Observation space shape for the current task, '???' means it needs manual specification.
 obs_shape: ???
+# Action space dimension for the current task, '???' means it needs manual specification.
 action_dim: ???
+# Maximum length of a single episode for the current task, '???' means it needs manual specification.
 episode_length: ???
+# List of observation space shapes for all tasks, '???' means it needs manual specification.
 obs_shapes: ???
+# List of action space dimensions for all tasks, '???' means it needs manual specification.
 action_dims: ???
+# List of maximum episode lengths for all tasks, '???' means it needs manual specification.
 episode_lengths: ???
+# Number of steps for seeding, '???' means it needs manual specification.
 seed_steps: ???
+# Size of the bins for Q-value discretization.
 bin_size: ???
